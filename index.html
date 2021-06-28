@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Radency Test Task 1 by Anthony Atanasov</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <table class="notes">
-            <tr>
-                <th>EEEEEEEEEEE</th>
-            </tr>
-        </table>
-    </body>
+	<head>
+		<meta charset="utf-8" />
+		<title>Radency Test Task 1 by Anthony Atanasov</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
+	</head>
+	<body>
+		<div class="table" id="allNotes">
+			<div class="table-row table-header">
+				<div><!--Empty tag to align header with table content--></div>
+				<div>Name</div>
+				<div>Creation date</div>
+				<div>Category</div>
+				<div>Content</div>
+				<div>Dates mentioned</div>
+				<div id="header-buttons">
+					<i class="fas fa-archive"></i>
+					<i class="fas fa-trash"></i>
+				</div>
+			</div>
+			<button id="show-note-form-button">Create note</button>
+		</div>
+		<div class="table" id="notes-info">
+			<div class="table-row table-header">
+				<div>Category</div>
+				<div>Active</div>
+				<div>Archived</div>
+			</div>
+		</div>
+		<div id="note-form-container">
+			<div>
+				<h1 id="form-header"></h1>
+				<hr />
+				<form id="note-form">
+					<label for="categories">Category</label>
+					<select name="categories" id="select-category">
+						<option value="Task">Task</option>
+						<option value="Random Thought">Random thought</option>
+						<option value="Idea">Idea</option>
+						<option value="Quote">Quote</option>
+					</select>
+					<label for="name">Name</label>
+					<input type="text" name="name" id="note-name"></input>
+
+					<label for="content">Content</label>
+					<textarea id="content-form"></textarea>
+
+                    <button id="create-note-button">Create note</button>
+                    <button id="abort-button">Abort</button>
+				</form>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
